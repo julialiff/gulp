@@ -25,6 +25,7 @@ gulp.task('sass', function() {
     return gulp.src('app/scss/**/*.scss')
       .pipe(sass())
       .pipe(gulp.dest('app/css'))
+      .pipe(gulp.dest('dist/css'))
       .pipe(browserSync.reload({
         stream: true
       }))
@@ -43,6 +44,26 @@ gulp.task('fonts', function() {
   .pipe(gulp.dest('dist/fonts'))
 })
 
-gulp.task('build',gulp.parallel('sass', 'useref', 'images', 'fonts'), function (){
+gulp.task('js', function() {
+    return gulp.src('app/js/*.js')
+    .pipe(gulp.dest('dist/js'))
+})
+
+
+gulp.task('watch', gulp.parallel('browserSync'), function (){
+    gulp.watch('app/scss/**/*.scss', ['sass']);
+    gulp.watch('app/*.html', browserSync.reload); 
+    gulp.watch('app/js/**/*.js', browserSync.reload); 
+  });
+
+
+
+gulp.task('build',gulp.parallel('sass', 'useref', 'images', 'fonts', 'js'), function (){
     console.log('Building files....');
 })
+
+gulp.task('serve',gulp.parallel('build', 'watch'), function (){
+    console.log('Building and serving files....');
+})
+
+gulp.task('default', ['sass', 'useref', 'images', 'fonts', 'js']);
