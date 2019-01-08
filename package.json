@@ -1,0 +1,19 @@
+{
+  "name": "gulptest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wukimmy/gulp.git"
+  },
+  "author": "Kimmy Wu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wukimmy/gulp/issues"
+  },
+  "homepage": "https://github.com/wukimmy/gulp#readme"
+}
