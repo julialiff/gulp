@@ -21,6 +21,12 @@ gulp.task('useref', function(){
     .pipe(gulp.dest('dist'))
 });
 
+gulp.task('css', function(){
+  return gulp.src('app/css/*.css')
+    .pipe(gulp.dest('dist/css'))
+});
+
+
 gulp.task('sass', function() {
     return gulp.src('app/scss/**/*.scss')
       .pipe(sass())
@@ -58,7 +64,7 @@ gulp.task('watch', gulp.parallel('browserSync'), function (){
 
 
 
-gulp.task('default',gulp.parallel('sass', 'useref', 'images', 'fonts', 'js'), function (){
+gulp.task('default',gulp.parallel('sass', 'useref', 'images', 'fonts', 'js', 'css'), function (){
     console.log('Building files....');
 })
 
