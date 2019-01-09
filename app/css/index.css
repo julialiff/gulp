@@ -1,0 +1,18 @@
+body{
+    background-image: url(../images/world.png);
+    background-color: darkorange;
+    margin-top: 10%
+}
+.banner{
+    background-color:  rgb(29, 33, 36);
+    margin-left: 5%;
+    font-family: 'Satisfy', cursive;
+    font-size: 600%;
+    color: rgb(255, 255, 255);
+    border: 70px solid  rgb(29, 33, 36);
+}
+p{
+    margin-left: 10%;  
+    color: aliceblue;
+    font-family: 'Arvo', serif;
+}
