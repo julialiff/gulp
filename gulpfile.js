@@ -58,12 +58,10 @@ gulp.task('watch', gulp.parallel('browserSync'), function (){
 
 
 
-gulp.task('build',gulp.parallel('sass', 'useref', 'images', 'fonts', 'js'), function (){
+gulp.task('default',gulp.parallel('sass', 'useref', 'images', 'fonts', 'js'), function (){
     console.log('Building files....');
 })
 
-gulp.task('serve',gulp.parallel('build', 'watch'), function (){
+gulp.task('serve',gulp.parallel('default', 'watch'), function (){
     console.log('Building and serving files....');
 })
-
-gulp.task('default', ['sass', 'useref', 'images', 'fonts', 'js']);
