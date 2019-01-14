@@ -1,0 +1,18 @@
+form{
+    margin: 3%;
+}
+.banner{
+    margin: 3%;
+    font-size: 300%
+}
+p{
+    margin: 3%;
+}
+body{
+    margin-top: 10%;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+.container{
+    border: 25px solid gray;
+}

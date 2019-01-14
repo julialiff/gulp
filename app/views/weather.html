@@ -1,13 +1,22 @@
 <html>
     <head>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <title>Testing Node</title>
+        <link rel="stylesheet" type="text/css" href="../css/weather.css">
+        <title>Check the weather</title>
     </head>
     <body>
-        <form action="http://localhost:3009?city=">
-            <input name="city" type="text" class="ghost-input" placeholder="Enter a City" required>
-            <input type="submit" class="ghost-button" value="Get Weather" >
-        </form>
+        <div class="container">
+            <div class="banner">
+                Check the weather!
+            </div>
+            <p>
+                Type in the name of the city and we will give the temperature.
+            </p>
+            <form action="http://localhost:3009?city=">
+                <input name="city" type="text" class="ghost-input" placeholder="Enter a City" required>
+                <input type="submit" class="ghost-button" value="Get Weather" >
+            </form>
+        </div>
     </body>
     
 </html>

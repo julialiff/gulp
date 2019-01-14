@@ -1,7 +1,9 @@
 body{
     background-image: url(../images/world.png);
     background-color: darkorange;
-    margin-top: 10%
+    margin-top: 10%;
+    margin-left: 20%;
+    margin-right: 20%;
 }
 .banner{
     background-color:  rgb(29, 33, 36);
