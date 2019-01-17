@@ -1,11 +1,23 @@
 <html>
     <head>
-        Testing Node
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="../css/weather.css">
+        <script src="../js/weather.js"></script> 
+        <title>Check the weather</title>
     </head>
     <body>
-        <form>
-            <input type="text" placeholder="Type the City name">
-            <button>Check!</button>
-        </form>
+        <div class="container">
+            <div class="banner">
+                Check the weather!
+            </div>
+            <p>
+                Type in the name of the city and we will give the temperature.
+            </p>
+            <form >
+                <input name="city" id ="city" type="text" class="ghost-input" placeholder="Enter a City" required>
+                <input type="submit" class="ghost-button" value="Get Weather"  onclick="CheckWeather()">
+            </form>
+            <p id="resp"></p>
+        </div>
     </body>
 </html>

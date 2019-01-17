@@ -1,7 +1,7 @@
-require('dotenv').config();
+
 function CheckWeather(){
     var city = document.getElementById('city').value;
-    let url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${process.env.API_KEY}`
+    let url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${'8b88835a3715783f1fe598c800f424e8'}`
     var request = new XMLHttpRequest();
     
     request.open('GET', url, true);
