@@ -1,6 +1,7 @@
 function CheckWeather(){
     var city = document.getElementById('city').value;
     let url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${'dce13a58af67fb1eec0338ff5aa501e2'}`;
+
     var request = new XMLHttpRequest();
     
     request.open('GET', url, true);
