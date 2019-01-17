@@ -1,12 +1,10 @@
-
 function CheckWeather(){
     var city = document.getElementById('city').value;
-    let url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${'8b88835a3715783f1fe598c800f424e8'}`
+    let url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${'dce13a58af67fb1eec0338ff5aa501e2'}`;
     var request = new XMLHttpRequest();
     
     request.open('GET', url, true);
     request.onload = function () {
-        console.log("entrei");
         var weather = JSON.parse(this.response);
         console.log(weather);
         if (request.status >= 200 && request.status < 400) {
