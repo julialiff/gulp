@@ -1,8 +1,9 @@
 function CheckWeather(){
+    const apiKey = '7ee225c6b5211a94910a3228fe9ef5ed';
     var city = document.getElementById('city').value;
-    let url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${'dce13a58af67fb1eec0338ff5aa501e2'}`;
+    let url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${apiKey}`;
     var request = new XMLHttpRequest();
-    
+
     request.open('GET', url, true);
     request.onload = function () {
         var weather = JSON.parse(this.response);
@@ -17,4 +18,3 @@ function CheckWeather(){
     }
     request.send();
 }
-
